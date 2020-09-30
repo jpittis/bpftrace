@@ -8,6 +8,7 @@
   - [Debian](#debian-package)
   - [openSUSE](#openSUSE-package)
   - [CentOS](#CentOS-package)
+  - [Arch](#arch-aur-package)
 - [Docker images](#docker-images)
   - [Copying bpftrace binary docker](#copying-bpftrace-binary-from-docker)
   - [Kernel headers install](#kernel-headers-install)
@@ -92,6 +93,16 @@ Is available and tracked [here](https://software.opensuse.org/package/bpftrace).
 
 A build maintained by @fbs can be found
 [here](https://github.com/fbs/el7-bpf-specs/blob/master/README.md#repository).
+
+## Arch package
+
+Upgrade the kernel to minimum 4.3.1-1 first; the `CONFIG_BPF_SYSCALL=y` configuration was not added until [this kernel release](https://bugs.archlinux.org/task/47008).
+
+Install these packages using any AUR helper such as [pacaur](https://aur.archlinux.org/packages/pacaur), [yaourt](https://aur.archlinux.org/packages/yaourt), [cower](https://aur.archlinux.org/packages/cower), etc.:
+```
+bpftrace
+```
+All build and install dependencies are listed [in the PKGBUILD](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=bpftrace) and should install automatically.
 
 # Docker images
 
